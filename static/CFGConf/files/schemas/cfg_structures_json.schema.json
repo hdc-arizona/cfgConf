@@ -1,0 +1,96 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Schema for CFG structures (functions, loops) in JSON format",
+	"description": "JSON Schema for CFG structures (functions, loops) specified in json format",
+	"type": "object",
+	"properties": {
+		"loops": {"$ref": "#/$defs/loops"},
+		"functions": {"$ref": "#/$defs/functions"}
+	},
+	"$defs": {
+		"loops": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": ["id", "nodes", "backedges"],
+				"properties": {
+					"id": {
+						"type": "string",
+						"description": "The id of the loop"
+					},
+					"label": {
+						"type": "string",
+						"description": "The label of the loop"
+					},
+					"nodes": {
+						"type": "array",
+						"description": "The array of node Ids",
+						"items": {
+							"type": "string"
+						}
+					},
+					"backedges": {
+						"type": "array",
+						"description": "The array of backedges for the loop",
+						"items": {
+							"type": "array",
+							"description": "The backedge in the form of an array. The first element is the Id of the source (tail) node of the backedge and the second element is the Id of the target (head) node of the backedge",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 2,
+	  						"maxItems": 2
+						}
+					},
+					"data": {
+						"type": "object",
+						"description": "Object which contains arbitrary data for the loop."
+					},
+					"loops": {
+						"$ref": "#/$defs/loops",
+						"description": "This contains the loops inside the current loop"
+					}
+				}
+			}
+		},
+
+		"functions": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": ["id", "nodes"],
+				"properties": {
+					"id": {
+						"type": "string",
+						"description": "the id of the function"
+					},
+					"label": {
+						"type": "string",
+						"description": "the label for the function"
+					},
+					"nodes": {
+						"type": "array",
+						"description": "the array of node Ids in the function",
+						"items": {
+							"type": "string"
+						},
+						"uniqueItems": true
+					},
+					"data": {
+						"type": "object",
+						"description": "Object which contains arbitrary data for the function."
+					}
+				}
+			}
+		}
+	}
+}
+
+	
+
+
+
+
+
+
+

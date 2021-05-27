@@ -1,4 +1,4 @@
 {
-	"PathPrefix": "static/CFGConf/files/small_graphs/",
-	"JSONFileName": "nestedif_minimal_w_graph_strs.json"
+	"PathPrefix": "static/CFGConf/files/example_files/",
+	"JSONFileName": "hello_world.json"
 }

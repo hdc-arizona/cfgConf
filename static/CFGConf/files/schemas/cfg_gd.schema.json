@@ -1,0 +1,406 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "CFGConf",
+	"description": "JSON Schema for cfg graph drawing configuration file",
+	"type": "object",
+	"anyOf": [
+		{"$ref": "#/$defs/nodes-edges"},
+		{"$ref": "#/$defs/data"}
+	],
+
+	"properties": {
+		
+		"loops": {"$ref": "#/$defs/loops"},
+
+		"functions": {"$ref": "#/$defs/functions"},
+
+		"rendering": {
+			"type": "object",
+			"description": "Contains the global properties for the graph rendering",
+			"properties": {
+				"node": {
+					"type": "object",
+					"description": "Global properties for nodes as defined in dot e.g. shape, style, class etc. Label is one additional keyword that lets you choose between node Id or full label for the node label", 
+					"properties": {
+						"label": {
+							"type": "string", 
+							"enum": ["id", "full"],
+							"description": "label lets you choose between node Id or full label for the node label globally"
+						}
+					}
+				}, 
+				"edge": {
+					"type": "object",
+					"description": "Global properties for edges as defined in dot e.g. style, color, class"
+				},
+				"rankdir": {
+					"type": "string",
+					"description": "Direction of layout. Default value is TB (Top Bottom). One of TB, BT, LR, RL",
+					"enum": ["TB", "LR", "BT", "RL"]
+				},
+				"nodesep": {
+					"type": "number",
+					"minimum": 0,
+					"description": "minimum separation between nodes in the same rank"
+				},
+				"ranksep": {
+					"type": "number",
+					"minimum": 0,
+					"description": "minimum separation between nodes in adjacent rank"
+				},
+				"loop": {
+					"type": "object",
+					"description":"Global properties for loop layout", 
+					"properties": {
+						"background": {
+							"type": "boolean",
+							"description": "Is loop boundary with depth encoding drawn?"
+						}
+					}
+				},
+				"function": {
+					"type": "object",
+					"description": "Global properties for function layout",
+					"properties": {
+						"boundary": {
+							"type": "boolean",
+							"description": "Is function drawn with boundary?"
+						}, 
+						"collapsingRules": {
+							"description": "Rules for collapsing and splitting functions",
+							"$ref": "#/$defs/collapsingRules"
+						}
+					}	
+				}
+			}
+			
+		},
+
+		"filtering": {
+			"type": "object",
+			"properties": {
+				"selectedNodes": {
+					"type": "array",
+					"description": "Node Ids of the currently selected nodes used for filtering the graph. If empty, use the first node of the graph. These nodes are highlighted as well.",
+					"items": {
+						"type": "string"
+					},
+					"uniqueItems": true
+				},
+				"isHopFilterOn": {
+					"type": "boolean",
+					"description": "Is K-hop filtering used for filtering"
+				},
+				"maxHops" : {
+					"type": "integer",
+					"minimum": 0,
+					"description": "The value of K used for K-hop filtering. 0 returns only the selected nodes."
+				},
+				"minNodes": {
+					"type": "integer",
+					"minimum":0,
+					"description": "The minimum number of nodes to retrieve when performing K-hop filtering. When this minimum is reached, we stop the K hop filtering for next hop."
+				},
+				"isLoopFilterOn": {
+					"type": "boolean",
+					"description": "Is loop based filtering used? Loops containing any of the selected nodes are included in the resulting graph. Performed before hop based filtering."
+				},
+				"loopDepth": {
+					"type": "integer",
+					"description": "The number of levels of loops to include when performing loop based filtering starting from the inner most loop with loopDepth 1. A value of -1 contains all the loops till the top level."
+				},
+				"isFunctionFilterOn": {
+					"type": "boolean",
+					"description": "Is function based filtering used? Functions containing any of the selected nodes are included in the resulting graph."
+				}
+			}
+		}
+	},
+
+	"$defs": {
+		"nodes": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": ["id"],
+				"properties": {
+					"id": {
+						"type": "string",
+						"description": "The id of the node. Also acts as the label if label not specified."
+					},
+					"label": {
+						"type": "string",
+						"description": "the label for the node"
+					},
+					"shape": {
+						"type": "string",
+						"description": "One of the shapes in dot"
+					},
+					"style": {
+						"type": "string",
+						"description": "One of the styles in dot"
+					},
+					"color": {
+						"type": "string",
+						"description": "Drawing color except for text in dot"
+					}, 
+					"fillcolor": {
+						"type": "string",
+						"description": "Node/Cluster background color for style filled"
+					},
+					"fontcolor": {
+						"type": "string",
+						"description": "Text color as in dot"
+					},
+					"tooltip": {
+						"type": "string",
+						"description": "Tooltip for the node"
+					},
+					"data": {
+						"type": "object",
+						"description":"This object contains arbitrary data for the node (similar to graphML)"
+					}, 
+					"class": {
+						"type": "string", 
+						"description": "Classnames to attach to the node; Combine with style in the css file to achieve styling of the nodes; Multiple space-separated classes are supported."
+					}
+				} 
+			}
+		},
+
+		"edges": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": ["source", "target"],
+				"properties": {
+					"source": {
+						"type": "string",
+						"description": "The id of the source node in the edge"
+					},
+					"target": {
+						"type": "string",
+						"description": "The id of the target node in the edge"
+					},
+					"weight": {
+						"type": "number",
+						"minimum": 0,
+						"description": "The weight of the edge. The heavier the weight, the shorter, straighter and more vertical the edge is."
+					},
+					"label": {
+						"type": "string",
+						"description": "The label of the edge"
+					},
+					"headport": {
+						"type": "string",
+						"description": "The port of the target node when routing the edge. Can be one of 'n','ne','e','se','s','sw','w','nw','c'"
+					},
+					"tailport": {
+						"type": "string",
+						"description": "The port of the source node when routing the edge. Can be one of 'n','ne','e','se','s','sw','w','nw','c'"
+					},
+					"style": {
+						"type": "string",
+						"description": "The style of the edge defined in dot"
+					},
+					"color": {
+						"type": "string",
+						"description": "The color of the edge excluding the text"
+					},
+					"arrowhead": {
+						"type": "string",
+						"description": "arrowhead as defined in dot"
+					},
+					"arrowsize": {
+						"type":"number",
+						"minimum": 0,
+						"description": "arrowsize as defined in dot"
+					},
+					"tooltip": {
+						"type": "string",
+						"description": "the tooltip for the edge"
+					},
+					"data": {
+						"type": "object",
+						"description": "Object which contains arbitrary data for the edge (similar to graphML)"
+					}, 
+					"class": {
+						"type": "string", 
+						"description": "Classnames to attach to the edge; Combine with style in the css file to achieve styling of the edges; Multiple space-separated classes are supported."
+					}
+				}
+			}
+		},
+
+		"loops": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": ["id", "nodes", "backedges"],
+				"properties": {
+					"id": {
+						"type": "string",
+						"description": "The id of the loop"
+					},
+					"label": {
+						"type": "string",
+						"description": "The label of the loop"
+					},
+					"nodes": {
+						"type": "array",
+						"description": "The array of node Ids",
+						"items": {
+							"type": "string"
+						}
+					},
+					"backedges": {
+						"type": "array",
+						"description": "The array of backedges for the loop",
+						"items": {
+							"type": "array",
+							"description": "The backedge in the form of an array. The first element is the Id of the source (tail) node of the backedge and the second element is the Id of the target (head) node of the backedge",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 2,
+	  						"maxItems": 2
+						}
+					},
+					"data": {
+						"type": "object",
+						"description": "Object which contains arbitrary data for the loop."
+					},
+					"loops": {
+						"$ref": "#/$defs/loops",
+						"description": "This contains the loops inside the current loop"
+					}
+				}
+			}
+		},
+
+		"functions": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": ["id", "nodes"],
+				"properties": {
+					"id": {
+						"type": "string",
+						"description": "the id of the function"
+					},
+					"label": {
+						"type": "string",
+						"description": "the label for the function"
+					},
+					"nodes": {
+						"type": "array",
+						"description": "the array of node Ids in the function",
+						"items": {
+							"type": "string"
+						},
+						"uniqueItems": true
+					},
+					"data": {
+						"type": "object",
+						"description": "Object which contains arbitrary data for the function."
+					}
+				}
+			}
+		},
+
+		"nodes-edges": {
+			"required": ["nodes", "edges"],
+			"properties": {
+				"nodes": {"$ref": "#/$defs/nodes"},
+				"edges": {"$ref": "#/$defs/edges"}
+			}
+		},
+
+		"data": {
+			"required": ["data"],
+			"properties": {
+				"data": {
+					"type": "object",
+					"required": ["graphFile"],
+					"properties": {
+						"graphFile": {
+							"type": "string",
+							"description": "the file name for the graphfile. Must be in the same directory as cfgconf json file. Can be either dot file or json file (with nodes and edges)"
+						}, 
+						"graphFormat": {
+							"type": "string", 
+							"enum": ["dot", "json"],
+							"description": "the format for the graphfile. Can be either dot or json. Automatically figures out the format based on the file extension if not specified."
+						}, 
+						"analysisFile": {
+							"type": "string", 
+							"description": "the file name for the analysis json file generated using dyninst. Must be in the same directory as cfgconf json file."
+						},   
+						"structureFile": {
+							"type": "string",
+							"description": "the file name for the json file with structures (functions and loops). Must be in the same directory as cfgconf json file."
+						}
+					}
+				}
+			}
+		},      
+
+		"collapsingRules" : {
+			"type": "object",
+			"description": "The rules describing when to collapse functions. Note: functions with loops are not collapsed.",
+			"properties": {
+				"isCollapsingEnabled": {
+					"type": "boolean", 
+					"description": "is function collapsing enabled"
+				},
+				"minIncomingEdges": {
+					"type": "integer",
+					"minimum": 0,
+					"description": "the in-degree threshold (i.e. minimum number of incoming edges to the function) for collapsing functions"
+				},
+				"minOutgoingEdges": {
+					"type": "integer",
+					"minimum": 0,
+					"description": "the out-degree threshold (i.e. minimum number of outcoming edges from the function) for collapsing functions"
+				},
+				"isFunctionOnly": {
+					"type": "boolean",
+					"description": "Can only nodes in a function be auxiliary nodes? True by default."
+				},
+				"minCollapseSize": {
+					"type": ["integer", "string"],
+					"description": "Default value is 1. The minimum size of function in the visible graph that can be collapsed. Can be specified as a number or percentage (append p at the end to specify percentage of nodes in the visible graph)."
+				},
+				"maxCollapseSize": {
+					"type": ["integer", "string"],
+					"description": "The maximum size of function in the visible graph that can be collapsed. Can be specified as a number or percentage (append p at the end to specify percentage of nodes in the visible graph)."
+				},
+				"alwaysCollapseList": {
+					"type": "array",
+					"description": "The list of function names that should always be collapsed", 
+					"items": {
+						"type": "string"	
+					},
+					"uniqueItems": true
+				},
+				"neverCollapseList": {
+					"type": "array",
+					"description": "The list of function names that should never be collapsed", 
+					"items": {
+						"type": "string"	
+					},
+					"uniqueItems": true
+				}
+			}
+		} 
+	}
+}
+
+	
+
+
+
+
+
+
+
