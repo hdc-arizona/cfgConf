@@ -1,0 +1,22 @@
+{
+	"data": {
+		"graphFile":"singlefile.out.dot",
+		"structureFile":"singlefile.structures.json"
+	},
+
+	"rendering": {
+		"node": {
+			"label": "id"
+		},
+		"function": {
+			"collapsingRules": {
+				"isCollapsingEnabled": true,
+				"minIncomingEdges": 4,
+				"minOutgoingEdges": 0,
+				"alwaysCollapseList": [],
+				"neverCollapseList": [],
+				"maxCollapseSize": "25p" 
+			}
+		}
+	}
+}

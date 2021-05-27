@@ -1,0 +1,11 @@
+{
+	"data": {
+		"graphFile":"while.dot",
+		"structureFile":"while_loops.json"
+	},
+	"rendering": {
+		"node": {
+			"label": "id"
+		}
+	}
+}

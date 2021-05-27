@@ -1,0 +1,11 @@
+{
+	"data": {
+		"graphFile":"nestedwhilewithif.dot",
+		"structureFile":"nestedwhilewithif_loops.json"
+	},
+	"rendering": {
+		"node": {
+			"label": "id"
+		}
+	}
+}

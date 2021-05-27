@@ -1,0 +1,113 @@
+{
+
+	"nodes": [
+		{
+			"id": "B0",
+			"label": "_init\n0x400590: call 0x30(%rip) 1, 0"
+		},
+		{
+			"id": "B1",
+			"label": "_init\n0x400595: add $0x8,%rsp\n0x400599: ret near (%rsp) 1, 0"
+		},
+		{
+			"id": "B2",
+			"label": "printf\n0x4005b0: jmp 0x200a62(%rip) 1, 0"
+		},
+		{
+			"id": "B3",
+			"label": "__gmon_start__\n0x4005c0: jmp 0x200a5a(%rip) 1, 0"
+		},
+		{
+			"id": "B4",
+			"label": "puts\n0x4005d0: jmp 0x200a52(%rip) 1, 0"
+		}
+	],
+
+	"edges": [
+		{
+			"source": "B0", 
+			"target": "B1",
+			"weight": 3
+		},
+
+		{	
+			"source": "B1", 
+			"target": "B0"
+		},
+
+		{
+			"source": "B1",
+			"target": "B2"
+		},
+
+		{
+			"source": "B2",
+			"target": "B0"
+		},
+
+		{
+			"source": "B0",
+			"target": "B3"
+		}
+	],
+
+	"loops": [
+		{
+			"id": "loop1",
+			"nodes": ["B0", "B1", "B2"],
+			"backedges": [["B2", "B0"]],
+			"loops":[
+				{
+					"id":"loop1.1",
+					"nodes": ["B0", "B1"],
+					"backedges":[["B1", "B0"]]  
+				}
+			]
+		}
+
+	],
+
+	"functions": [
+		{
+			"id": "main",
+			"nodes": ["B0", "B1", "B2"]
+		},
+		{
+			"id":"sum",
+			"nodes": ["B3"]
+		}
+
+	],
+
+	"rendering": {
+		"node": {
+			"shape": "box",
+			"style": "solid",
+			"label": "id"
+		},
+		"edge": {
+			"style": "solid",
+			"color": "black"
+		},
+		"loop": {
+			"background": true
+		},
+		"function": {
+			"boundary": false,
+			"collapsingRules": {
+				"isCollapsingEnabled": true,
+				"minIncomingEdges": 5,
+				"minOutgoingEdges": 5
+			}
+		}
+	},
+
+	"filtering": {
+		"selectedNodes": [],
+		"isHopFilterOn":true, 
+		"maxHops":3, 
+		"minNodes":20, 
+		"isLoopFilterOn": true
+	}
+
+}

@@ -1,0 +1,6 @@
+{
+	"data": {
+		"graphFile":"nestedif_minimal.dot",
+		"structureFile":"nestedif_fns.json"
+	}
+}

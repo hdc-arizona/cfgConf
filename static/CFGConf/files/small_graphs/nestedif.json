@@ -1,0 +1,11 @@
+{
+	"data": {
+		"graphFile":"nestedif.dot",
+		"structureFile":"nestedif_loops.json"
+	},
+	"rendering": {
+		"node": {
+			"label": "id"
+		}
+	}
+}

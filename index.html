@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CFG Graph Visualization</title>
+
+    <!-- <script src="static/CFGConf/lib/d3.v6.js"></script> -->
+    <script src="static/CFGConf/lib/d3.min.js"></script>
+    <script src="static/CFGConf/lib/graphlib.js"></script>
+    <script src="static/CFGConf/lib/graphlib-dot.js"></script>
+    <script src="static/CFGConf/lib/viz.js"></script>
+    <script src="static/CFGConf/lib/full.render.js"></script>
+    <script src="static/CFGConf/lib/convexhull.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="static/CFGConf/style.css">
+    
+</head>
+<body>
+
+<button class="dropbtn invisible" id= "mydropbtn">Menu</button>
+
+<div id="myHoverTopNav" class="dropdown">
+
+    <div id="topPanel" class="dropdown-content">
+
+        <label style=" padding: 3px;" for="fi_src">Input CFG JSON file</label>
+        <input style=" padding: 3px;" type="file" id="fi_json"/>
+        <br/>
+        <input style=" margin: 3px;" type="button" id="loadFile" value="LoadFiles"/>
+        <br/>
+
+        <label style=" margin:3px; padding: 3px;"><input style=" margin: 3px;" type="checkbox" id="enableTooltip" value="enableTooltip" checked>Enable Tooltip</label>
+        <br/>
+
+        <label style=" margin:3px; background-color:#fdd0a2; padding:1px"><input style=" margin: 3px;" type="checkbox" id="loopBgFill" value="loopBgFill" checked>Show Loop Boundaries</label>
+        <br/>
+
+        <input style=" margin: 3px;"  type="button" id="save" value="Save File"/>
+        <input style=" margin: 3px;" type="button" id="closeMenu" value="Close Menu">
+
+    </div>
+</div>
+
+
+<div id="gDiv">
+    <div id="tooltip" class="hidden">
+        <p><span id="tp_value"></span></p>
+    </div>
+
+    <!-- <label style=" margin:3px; padding: 3px;"><input style=" margin: 3px;" type="checkbox" id="enableBrush_cfg" value="enableBrush">Enable Brush</label> -->
+    <!-- <label style=" margin:3px; padding: 3px;"><input style=" margin: 3px;" type="radio" checked="checked" name="cfgBrush" id="enableNav_cfg" value="enableNav">Navigation Mode</label>
+    <br/>
+    <label style=" margin:3px; padding: 3px;"><input style=" margin: 3px;" type="radio" name="cfgBrush" id="enableBrush_cfg" value="enableBrush">Selection Mode</label> -->
+
+    <!-- The svg element is created by the renderer itself -->
+    <!-- <svg id="graphContainer">
+        <g/>
+    </svg> -->
+
+</div>
+
+
+<!-- <script src="static/CFGConf/lib/highlight.pack.js"></script> -->
+<script src="static/CFGConf/defs.js"></script>
+<script src="static/CFGConf/fileUtils.js"></script>
+<script src="static/CFGConf/utils.js"></script>
+<script src="static/CFGConf/graphUtils.js"></script>
+<script src="static/CFGConf/loopify_dagre.js"></script>
+<script src="static/CFGConf/cfgView.js"></script>
+<script src="static/CFGConf/filtering.js"></script>
+<script src="static/CFGConf/main.js"></script>
+
+</body>
+</html>

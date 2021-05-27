@@ -1,0 +1,11 @@
+{
+	"data": {
+		"graphFile":"cathy_orig_dot.dot",
+		"structureFile":"cathy_orig_loops.json"
+	},
+	"rendering": {
+		"node": {
+			"label": "id"
+		}
+	}
+}

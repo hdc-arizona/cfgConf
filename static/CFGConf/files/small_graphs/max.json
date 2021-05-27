@@ -1,0 +1,11 @@
+{
+	"data": {
+		"graphFile":"max.dot",
+		"structureFile":"max_loops.json"
+	},
+	"rendering": {
+		"node": {
+			"label": "full"
+		}
+	}
+}

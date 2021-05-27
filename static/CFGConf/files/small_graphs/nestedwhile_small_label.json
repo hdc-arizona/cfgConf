@@ -1,0 +1,11 @@
+{
+	"data": {
+		"graphFile":"nestedwhile_small_labels.dot",
+		"structureFile":"nestedwhile_small_label_loops.json"
+	},
+	"rendering": {
+		"node": {
+			"label": "id"
+		}
+	}
+}

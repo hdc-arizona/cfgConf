@@ -1,0 +1,19 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x7fcca6d091d0 [shape=record,label="{%0:\n  %1 = alloca i32, align 4\n  %2 = alloca i32, align 4\n  %3 = alloca i32, align 4\n  store i32 0, i32* %1, align 4\n  store i32 0, i32* %2, align 4\n  br label %4\n}"];
+	Node0x7fcca6d091d0 -> Node0x7fcca6d14c10;
+	Node0x7fcca6d14c10 [shape=record,label="{%4:\n  %5 = load i32, i32* %2, align 4\n  %6 = icmp slt i32 %5, 10\n  br i1 %6, label %7, label %21\n|{<s0>T|<s1>F}}"];
+	Node0x7fcca6d14c10:s0 -> Node0x7fcca6d14e00;
+	Node0x7fcca6d14c10:s1 -> Node0x7fcca6d14e90;
+	Node0x7fcca6d14e00 [shape=record,label="{%7:\n  %8 = load i32, i32* %2, align 4\n  %9 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([6 x i8], [6 x\n... i8]* @.str, i32 0, i32 0), i32 %8)\n  store i32 0, i32* %3, align 4\n  br label %10\n}"];
+	Node0x7fcca6d14e00 -> Node0x7fcca6d15510;
+	Node0x7fcca6d15510 [shape=record,label="{%10:\n  %11 = load i32, i32* %3, align 4\n  %12 = icmp slt i32 %11, 10\n  br i1 %12, label %13, label %18\n|{<s0>T|<s1>F}}"];
+	Node0x7fcca6d15510:s0 -> Node0x7fcca6d156d0;
+	Node0x7fcca6d15510:s1 -> Node0x7fcca6d15720;
+	Node0x7fcca6d156d0 [shape=record,label="{%13:\n  %14 = load i32, i32* %3, align 4\n  %15 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([6 x i8], [6 x\n... i8]* @.str.1, i32 0, i32 0), i32 %14)\n  %16 = load i32, i32* %3, align 4\n  %17 = add nsw i32 %16, 1\n  store i32 %17, i32* %3, align 4\n  br label %10\n}"];
+	Node0x7fcca6d156d0 -> Node0x7fcca6d15510;
+	Node0x7fcca6d15720 [shape=record,label="{%18:\n  %19 = load i32, i32* %2, align 4\n  %20 = add nsw i32 %19, 1\n  store i32 %20, i32* %2, align 4\n  br label %4\n}"];
+	Node0x7fcca6d15720 -> Node0x7fcca6d14c10;
+	Node0x7fcca6d14e90 [shape=record,label="{%21:\n  ret i32 0\n}"];
+}

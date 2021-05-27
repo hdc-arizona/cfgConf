@@ -1,0 +1,42 @@
+{
+	"data": {
+		"graphFile":"singlefile.out.dot",
+		"graphFormat": "dot",
+		"structureFile":"singlefile.structures.json"
+	},
+
+	"rendering": {
+		"node": {
+			"shape": "box",
+			"style": "solid",
+			"label": "id"
+		},
+		"edge": {
+			"style": "solid",
+			"color": "black"
+		},
+		"loop": {
+			"background": true
+		},
+		"function": {
+			"boundary": true,
+			"collapsingRules": {
+				"isCollapsingEnabled": true,
+				"minIncomingEdges": 5,
+				"alwaysCollapseList": [],
+				"neverCollapseList": [],
+				"maxCollapseSize": "25p" 
+			}
+		}
+
+	},
+
+	"filtering": {
+		"selectedNodes": [],
+		"isHopFilterOn":true, 
+		"maxHops":3, 
+		"minNodes":20, 
+		"isLoopFilterOn": true
+	}
+
+}

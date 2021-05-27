@@ -1,0 +1,11 @@
+{
+	"data": {
+		"graphFile":"cathy_dot_orig_w_short_lbls.dot",
+		"structureFile":"cathy_orig_w_short_lbls_loops.json"
+	},
+	"rendering": {
+		"node": {
+			"label": "id"
+		}
+	}
+}

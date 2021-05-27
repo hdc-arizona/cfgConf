@@ -1,0 +1,41 @@
+{
+	"data": {
+		"graphFile":"ltimes.dot",
+		"analysisFile":"ltimes.json"
+	},
+
+	"rendering": {
+		"node": {
+			"shape": "box",
+			"style": "solid",
+			"label": "id"
+		},
+		"edge": {
+			"style": "solid",
+			"color": "black"
+		},
+		"loop": {
+			"background": true
+		},
+		"function": {
+			"boundary": true,
+			"collapsingRules": {
+				"isCollapsingEnabled": true,
+				"minIncomingEdges": 3,
+				"alwaysCollapseList": [],
+				"neverCollapseList": [],
+				"maxCollapseSize": "25p" 
+			}
+		}
+
+	},
+
+	"filtering": {
+		"selectedNodes": ["B1973", "B1974", "B1978", "B1986", "B1993", "B4052", "B4183", "B4205", "B4206", "B4430"],
+		"isHopFilterOn":true, 
+		"maxHops":3, 
+		"minNodes":20, 
+		"isLoopFilterOn": true
+	}
+
+}

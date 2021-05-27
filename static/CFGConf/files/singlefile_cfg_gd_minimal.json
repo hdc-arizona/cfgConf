@@ -1,0 +1,71 @@
+{
+
+	"nodes": [
+		{
+			"id": "B0" 
+		},
+		{
+			"id": "B1"
+		},
+		{
+			"id": "B2"
+		},
+		{
+			"id": "B3"
+		},
+		{
+			"id": "B4"
+		}
+	],
+
+	"edges": [
+		{
+			"source": "B0", 
+			"target": "B1"
+		},
+
+		{	
+			"source": "B1", 
+			"target": "B0"
+		},
+
+		{
+			"source": "B1",
+			"target": "B2"
+		},
+
+		{
+			"source": "B2",
+			"target": "B0"
+		}
+	],
+
+	"loops": [
+		{
+			"id": "loop1",
+			"nodes": ["B0", "B1", "B2"],
+			"backedges": [["B2", "B0"]],
+			"loops":[
+				{
+					"id":"loop1.1",
+					"nodes": ["B0", "B1"],
+					"backedges":[["B1", "B0"]]  
+				}
+			]
+		}
+
+	],
+
+	"functions": [
+		{
+			"id": "main",
+			"nodes": ["B0", "B1", "B2"]
+		},
+		{
+			"id":"sum",
+			"nodes": ["B3"]
+		}
+
+	]
+
+}

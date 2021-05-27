@@ -1,0 +1,6 @@
+{
+	"data": {
+		"graphFile":"nestedwhile_minimal.dot",
+		"structureFile":"nestedwhile_small_label_loops_fns.json"
+	}
+}
