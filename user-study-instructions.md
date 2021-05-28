@@ -52,15 +52,12 @@ Replicate the drawing below. In other words, create a _CFGConf JSON file_ that c
 Produce a drawing of the graph from the dot file `t2.dot`. Loops inside the graph are provided in the file `t2_loops.json`. 
 
 #### Step 2.2
-Compare the resulting drawing from _CFGConf_ to a drawing produced using _dot graphviz_ on the file `t2.dot`. 
+Compare the resulting drawing from _CFGConf_ to a drawing produced using _dot graphviz_ on the file `t2.dot`. **Note**: These drawings are expected to appear different. Do not be concerned if they do not look the same.
 
 To produce a pdf file using _graphviz_, you can run the following command in the terminal which will output the file `t2.pdf` in the same directory.
 ```
 dot -Tpdf t2.dot -o t2.pdf
 ```
-You do not need to submit this file.
-
-**Note**: These drawings are expected look different. Do not be concerned if they do not look the same.
 
 ### Task 3:
 
