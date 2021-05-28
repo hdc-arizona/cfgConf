@@ -20,7 +20,7 @@ Let us first get familiar with CFGConf before moving to the tasks. Run the hello
 ### Task 1: 
 Replicate the drawing below i.e create a _CFGConf JSON file_ that creates the provided drawing.
 
-<img src="static/CFGConf/files/tasks/task1/graph.png" alt="result" width="40%" align="middle"/>
+<img src="static/CFGConf/files/tasks/task1/graph.png" alt="result" width="20%" align="middle"/>
 
 ### Task 2:
 Produce a drawing of the graph from the dot file `t2.dot`. Loops inside the graph are provided in the file `t2_loops.json`. Make sure the nodes contain the full labels in the drawing.
