@@ -1,25 +1,44 @@
 Welcome to the evaluation of _CFGConf_. Thank you for taking the time to partipate in the evaluation. Your participation will help us gather valuable feedback to improve the language and the system in the future versions. 
 
-This study has been approved by the University of Arizona Institutional Review Board (IRB). For more details, view the consent information for the [study](irb/Consent-Information-Study.pdf) and the accompanying [survey](irb/Consent-Information-Survey.pdf). Instead of conducting the study through a remote video session, we are conducting the study offline. No identifying data is recorded during the study. 
+This study has been approved by the University of Arizona Institutional Review Board (IRB). For more details, view the consent information for the [study](irb/Consent-Information-Study.pdf) and the accompanying [survey](irb/Consent-Information-Survey.pdf). Only Sabin Devkota will have access to data regarding whether or not you choose to participate. The other researchers analyzing the results (i.e., Kate Isaacs) will only have access to anonymized data and will not know who participated.
 
-_CFGConf_ is a JSON-based language for visualizing Control Flow Graphs (CFGs). CFGConf is designed to make it convenient to generate drawings of graphs with just a few lines of JSON code. With its domain-specific layout for visualizing loops and flexible ways to filter and collapse the graph, you will be able to visualize graphs that match the mental model of the users without writing complicated program code. 
+Instead of conducting the study through a remote video session, we are conducting the study offline. You will be asked:
 
-As part of the evaluation, you will be asked to perform selected tasks and to provide your feedback on _CFGConf_. This is an offline evaluation. **There is no time limit. You can finish as many tasks as your time permits.** 
+1. To download _CFGConf_ and perform the tasks described below to familiarize yourself with the system.
+2. Send us the _CFGConf_ files JSON files you create in the process.
+3. Fill out a [survey](https://forms.gle/qgohazefPyHb5C1U6) regarding your experience.
 
-**NOTE:** We are evaluating the usefulness of our language/system and not your knowledge on CFGs or graph drawing. You can refer to the [wiki](https://github.com/devkotasabin/cfgConf/wiki) at any time. You can contact devkotasabin@email.arizona.edu with any queries or issues when performing the tasks.
+You do not need to perform the tasks in one continuous session. You may leave and return. We estimate all tasks and feedback should take about an hour.
 
-When you finish the tasks, **please fill out the survey [here](https://forms.gle/qgohazefPyHb5C1U6)**. The survey will collect your feedback on your experience with using _CFGConf_ and how it can be improved. 
+We are evaluating the usefulness of our language/system and **not** your knowledge on CFGs or graph drawing. You can refer to the [CFGConf wiki](https://github.com/devkotasabin/cfgConf/wiki) throughout. If you get stuck or have any questions during or after, please contact devkotasabin@email.arizona.edu.
+
+
+## Setting up CFGConf
+
+_CFGConf_ is a JSON-based language for visualizing Control Flow Graphs (CFGs) as node-link diagrams. CFGConf is designed to make it convenient to generate CFG-specific drawings with just a few lines of JSON code. Features include filtering the graph to nodes and loops of interest and automatically collapsing and de-emphasizing uninteresting functions.
+
+First, follow the [setup guide](https://github.com/devkotasabin/cfgConf/wiki/Setup-Guide) to create the Hello World example to verify _CFGConf) is working on your system.
+
+
+### Troubleshooting
+
+**init.json**: Apart from syntax errors, the most common error is caused by the `init.json` file not pointing to the correct JSON file. For more on troubleshooting, refer to the [troubleshooting section](https://github.com/devkotasabin/cfgConf/wiki/Setup-Guide#troubleshooting).
+
+**syntax errors**: If your CFG does not load after 15 seconds, you may want to validate your JSON file. See [**validating your JSON file**](https://github.com/devkotasabin/cfgConf/wiki/Setup-Guide#optional-validate-your-cfgconf-json-files-with-schema-validator) to find out whether the syntax is correct and the JSON file conforms to the schema.
+
+
 
 ## Tasks
 
-The related files for each tasks are located in individual folders inside the `tasks` directory. The tasks directory is located here `cfgConf > static > CFGConf > files > tasks`. After completing the tasks, you can provide the resulting _CFGConf JSON files_ in the **survey**. You can also add additional comments related to each task e.g. the strategy you used for the task, what worked and what didn't, and any feedback to improve _CFGConf_. Lets continue with the tasks.
+Please perform the tasks below. Each will ask you to create a _CFGConf_ JSON file. Please save these files and send them to us after the study.
 
-### Task 0: Running a hello world example
-Let us first get familiar with CFGConf before moving to the tasks. Run the hello world example according to the [setup guide](https://github.com/devkotasabin/cfgConf/wiki/Setup-Guide) in the wiki. Then you can browse through the [quickstart guide](https://github.com/devkotasabin/cfgConf/wiki/Quickstart-Guide) to see common usage examples of _CFGConf_. For more details, you can refer to the [reference guide](https://github.com/devkotasabin/cfgConf/wiki/Reference-Guide).
+Related files for each task are located in `cfgConf > static > CFGConf > files > tasks`.
 
-> Note: During the tasks, you can refer to the section on [**validating your JSON file**](https://github.com/devkotasabin/cfgConf/wiki/Setup-Guide#optional-validate-your-cfgconf-json-files-with-schema-validator) to find out whether the syntax is correct and the JSON file conforms to the schema.
->
-> Apart from syntax errors, the most common error is caused by the `init.json` file not pointing to the correct JSON file. For more on troubleshooting, refer to the [troubleshooting section](https://github.com/devkotasabin/cfgConf/wiki/Setup-Guide#troubleshooting).
+Throughout these tasks, you can access any resources, including:
+
+- the [quickstart guide](https://github.com/devkotasabin/cfgConf/wiki/Quickstart-Guide) with  common usage examples of _CFGConf_ 
+- the [reference guide](https://github.com/devkotasabin/cfgConf/wiki/Reference-Guide) which describes all available keys
+
 
 ### Task 1: 
 Replicate the drawing below i.e create a _CFGConf JSON file_ that creates the provided drawing.
@@ -28,45 +47,49 @@ Replicate the drawing below i.e create a _CFGConf JSON file_ that creates the pr
 </p>
 
 ### Task 2:
-Produce a drawing of the graph from the dot file `t2.dot`. Loops inside the graph are provided in the file `t2_loops.json`. The drawing should look as follows:
 
-<p align="center">
-  <img src="static/CFGConf/files/tasks/task2/t2_graph.png" alt="result" width="50%" align="middle"/>
-</p>
+#### Step 2.1
+Produce a drawing of the graph from the dot file `t2.dot`. Loops inside the graph are provided in the file `t2_loops.json`. 
 
-Compare the resulting drawing from _CFGConf_ to the drawing produced using _dot graphviz_ on the file `t2.dot`. To produce a pdf file using _dot graphviz_, you can run the following command in the terminal which will output the file `t2.pdf` in the same directory.
+#### Step 2.2
+Compare the resulting drawing from _CFGConf_ to the drawing produced using _dot graphviz_ on the file `t2.dot`. **These drawings will look different.**
+
+To produce a pdf file using _graphviz_, you can run the following command in the terminal which will output the file `t2.pdf` in the same directory.
 ```
 dot -Tpdf t2.dot -o t2.pdf
 ```
+You do not need to submit this file.
 
 ### Task 3:
-#### 3.1
-Produce a filtered drawing using the graph `ltimes.dot`. Use the following set of nodes as the starting nodes for filtering.
+
+#### Step 3.1
+Produce a filtered drawing using the graph specified in `ltimes.dot` where only node ids are shown inside the nodes, rather than disassembly like the previous example. 
+
+A _dyninst analysis file_ named `ltimes.json` with the functions and loops is also provided. 
+
+Use the following set of nodes as the starting nodes for filtering:
 ```
 "B1973", "B1974", "B1978", "B1986", "B1993", "B4052", "B4183", "B4205", "B4206", "B4430"
 ```
-Filter until you finish **3 hops or 25 nodes whichever comes first**. This graph is produced from a benchmark code used to measure the performance of High Performance Computing systems. A dyninst analysis file named `ltimes.json` is provided as well. This file contains the functions and loops in the program. Refer to the [`data` section](https://github.com/devkotasabin/cfgConf/wiki/Reference-Guide#data-object) in the reference guide to see how to use the _dyninst analysis file_. Make sure the drawing contains only node ids inside the nodes. 
+The filter should be limited to nodes within **3 hops** or a rendered graph of **25 nodes**, whichever comes first. 
 
-#### 3.2 
+#### Step 3.2
 Turn off the filtering and note the output.
 
 ### Task 4:
-Produce a filtered drawing using the same graph files `ltimes.dot` and `ltimes.json`. Use the following set of nodes as the starting nodes for filtering. 
+Produce a filtered drawing using the same graph files `ltimes.dot` and `ltimes.json` where all the functions are collapsed except the functions containing the loops and the function with the name `__kmpc_fork_call`.
+
+Use the following set of nodes as the starting nodes for filtering:
 ```
 "B3805", "B4451"
 ```
-Now, produce the drawing with all functions collapsed except the functions containing the loops and the function with the name `__kmpc_fork_call`.
+
 
 ## Thank you
-Thats it!. We are done with the tasks. Thank you for giving your valuable time for the evaluation of _CFGConf_. Please do not forget to complete the survey where you will be asked to upload your JSON files and provide your feedback. 
+Thats it! We are done with the tasks. Please fill out the survey regarding _CFGConf_ below:
 
 ### <a href="https://forms.gle/qgohazefPyHb5C1U6">Please fill out the survey here</a>
 
-Looking forward to your valuable feedback. 
+You may upload your JSON files through this survey or email them to devkotasabin@email.arizona.edu
 
-
-
-
-
-
-
+Thank you for giving your valuable time for the evaluation of _CFGConf_. We look forward to your feedback.
