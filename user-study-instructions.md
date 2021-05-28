@@ -17,7 +17,7 @@ The related files for each tasks are located in individual folders inside the `t
 ### Task 0: Running a hello world example
 Let us first get familiar with CFGConf before moving to the tasks. Run the hello world example according to the [setup guide](https://github.com/devkotasabin/cfgConf/wiki/Setup-Guide) in the wiki. Then you can browse through the [quickstart guide](https://github.com/devkotasabin/cfgConf/wiki/Quickstart-Guide) to see common usage examples of _CFGConf_. For more details, you can refer to the [reference guide](https://github.com/devkotasabin/cfgConf/wiki/Reference-Guide).
 
-> Note: You can refer to the section on [**validating your JSON**](https://github.com/devkotasabin/cfgConf/wiki/Setup-Guide#optional-validate-your-cfgconf-json-files-with-schema-validator) to find out whether the syntax is correct and the JSON conforms to the schema.
+> Note: You can refer to the section on [**validating your JSON file**](https://github.com/devkotasabin/cfgConf/wiki/Setup-Guide#optional-validate-your-cfgconf-json-files-with-schema-validator) to find out whether the syntax is correct and the JSON file conforms to the schema.
 
 ### Task 1: 
 Replicate the drawing below i.e create a _CFGConf JSON file_ that creates the provided drawing.
