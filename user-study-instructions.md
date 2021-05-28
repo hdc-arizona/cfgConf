@@ -54,7 +54,7 @@ Produce a drawing of the graph from the dot file `t2.dot`. Loops inside the grap
 #### Step 2.2
 Compare the resulting drawing from _CFGConf_ to a drawing produced using _dot graphviz_ on the file `t2.dot`. **Note**: These drawings are expected to appear different. Do not be concerned if they do not look the same.
 
-To produce a pdf file using _graphviz_, you can run the following command in the terminal which will output the file `t2.pdf` in the same directory.
+To produce a pdf file using _graphviz_, you can run the following command in the terminal. The drawing `t2.pdf` will be created in the same directory.
 ```
 dot -Tpdf t2.dot -o t2.pdf
 ```
