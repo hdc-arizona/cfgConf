@@ -37,13 +37,14 @@ dot -Tpdf t2.dot -o t2.pdf
 
 ### Task 3:
 #### 3.1
-Produce a filtered drawing using the graph `ltimes.dot`. This graph is produced from a benchmark code used to measure the performance of High Performance Computing systems. A dyninst analysis file named `ltimes.json` is provided as well. This file contains the functions and loops in the program. Refer to the [`data` section](https://github.com/devkotasabin/cfgConf/wiki/Reference-Guide#data-object) in the reference guide to see how to use the analysis file. Produce the drawing with only the node id inside the node. Refer to the [filtering section](https://github.com/devkotasabin/cfgConf/wiki/Reference-Guide#graph-filtering-options) to produce a filtered graph. Note the output when the filtering is not applied.
-
-#### 3.2
-Use the following set of nodes as the starting nodes for filtering.
+Produce a filtered drawing using the graph `ltimes.dot`. Use the following set of nodes as the starting nodes for filtering.
 ```
 "B1973", "B1974", "B1978", "B1986", "B1993", "B4052", "B4183", "B4205", "B4206", "B4430"
 ```
+Filter until 3 hops or 25 nodes whichever comes first. This graph is produced from a benchmark code used to measure the performance of High Performance Computing systems. A dyninst analysis file named `ltimes.json` is provided as well. This file contains the functions and loops in the program. Refer to the [`data` section](https://github.com/devkotasabin/cfgConf/wiki/Reference-Guide#data-object) in the reference guide to see how to use the analysis file. Make sure the drawing contains only node ids inside the nodes. 
+
+#### 3.2 
+Note the output when the filtering is not applied.
 
 ### Task 4:
 Produce a filtered drawing using the same graph files `ltimes.dot` and `ltimes.json`. Use the following set of nodes as the starting nodes for filtering. 
