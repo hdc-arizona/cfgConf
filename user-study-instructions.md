@@ -18,6 +18,7 @@ The related files for each tasks are located in individual folders inside the `t
 Let us first get familiar with CFGConf before moving to the tasks. Run the hello world example according to the [setup guide](https://github.com/devkotasabin/cfgConf/wiki/Setup-Guide) in the wiki. Then you can browse through the [quickstart guide](https://github.com/devkotasabin/cfgConf/wiki/Quickstart-Guide) to see common usage examples of _CFGConf_. For more details, you can refer to the [reference guide](https://github.com/devkotasabin/cfgConf/wiki/Reference-Guide).
 
 > Note: During the tasks, you can refer to the section on [**validating your JSON file**](https://github.com/devkotasabin/cfgConf/wiki/Setup-Guide#optional-validate-your-cfgconf-json-files-with-schema-validator) to find out whether the syntax is correct and the JSON file conforms to the schema.
+> The most common error is caused by the `init.json` file not pointing to the correct JSON file. For more on troubleshooting, refer to the [troubleshooting section](https://github.com/devkotasabin/cfgConf/wiki/Setup-Guide#troubleshooting).
 
 ### Task 1: 
 Replicate the drawing below i.e create a _CFGConf JSON file_ that creates the provided drawing.
