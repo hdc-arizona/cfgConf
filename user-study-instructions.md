@@ -8,7 +8,7 @@ As part of the evaluation, you will be asked to perform selected tasks and to pr
 
 **NOTE:** We are evaluating the usefulness of our language/system and not your knowledge on CFGs or graph drawing. You can refer to the [wiki](https://github.com/devkotasabin/cfgConf/wiki) at any time. You can contact devkotasabin@email.arizona.edu with any queries or issues when performing the tasks.
 
-When you finish the tasks, **please fill out the survey [here](https://forms.gle/1AAVEF1fYCK3rHaR8)**. The survey will collect your feedback on your experience with using _CFGConf_ and how it can be improved. 
+When you finish the tasks, **please fill out the survey [here](https://forms.gle/qgohazefPyHb5C1U6)**. The survey will collect your feedback on your experience with using _CFGConf_ and how it can be improved. 
 
 ## Tasks
 
@@ -44,7 +44,7 @@ Produce a filtered drawing using the graph `ltimes.dot`. Use the following set o
 Filter until 3 hops or 25 nodes whichever comes first. This graph is produced from a benchmark code used to measure the performance of High Performance Computing systems. A dyninst analysis file named `ltimes.json` is provided as well. This file contains the functions and loops in the program. Refer to the [`data` section](https://github.com/devkotasabin/cfgConf/wiki/Reference-Guide#data-object) in the reference guide to see how to use the analysis file. Make sure the drawing contains only node ids inside the nodes. 
 
 #### 3.2 
-Note the output when the filtering is not applied.
+Turn off the filtering and note the result.
 
 ### Task 4:
 Produce a filtered drawing using the same graph files `ltimes.dot` and `ltimes.json`. Use the following set of nodes as the starting nodes for filtering. 
@@ -54,7 +54,7 @@ Produce a filtered drawing using the same graph files `ltimes.dot` and `ltimes.j
 Now, produce the drawing with all functions collapsed except the functions containing the loops and the function with the name `__kmpc_fork_call`.
 
 ## Thank you
-Thats it!. We are done with the tasks. Thank you for giving your valuable time for the evaluation of _CFGConf_. Please do not forget to complete the survey where you will be asked to upload your JSON files and provide your feedback. [You can access the survey here](https://forms.gle/1AAVEF1fYCK3rHaR8). Looking forward to your valuable feedback. 
+Thats it!. We are done with the tasks. Thank you for giving your valuable time for the evaluation of _CFGConf_. Please do not forget to complete the survey where you will be asked to upload your JSON files and provide your feedback. <a href="https://forms.gle/qgohazefPyHb5C1U6">You can access the survey here</a>. Looking forward to your valuable feedback. 
 
 
 
