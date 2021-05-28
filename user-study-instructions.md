@@ -40,26 +40,26 @@ Throughout these tasks, you can access any resources, including:
 - the [reference guide](https://github.com/devkotasabin/cfgConf/wiki/Reference-Guide) which describes all available keys
 
 
-### Task 1: 
+### Task 1
 Replicate the drawing below. In other words, create a _CFGConf JSON file_ that creates the provided drawing.
 <p align="center">
   <img src="static/CFGConf/files/tasks/task1/graph.png" alt="result" width="20%" align="middle"/>
 </p>
 
-### Task 2:
+### Task 2
 
-**Step 2.1** Produce a drawing of the graph from the dot file `t2.dot`. Loops inside the graph are provided in the file `t2_loops.json`. 
+**Step 2.1:** Produce a drawing of the graph from the dot file `t2.dot`. Loops inside the graph are provided in the file `t2_loops.json`. 
 
-**Step 2.2** Compare the resulting drawing from _CFGConf_ to a drawing produced using _dot graphviz_ on the file `t2.dot`. **Note**: These drawings are expected to appear different. Do not be concerned if they do not look the same.
+**Step 2.2:** Compare the resulting drawing from _CFGConf_ to a drawing produced using _dot graphviz_ on the file `t2.dot`. **Note**: These drawings are expected to appear different. Do not be concerned if they do not look the same.
 
 To produce a pdf file using _graphviz_, you can run the following command in the terminal. The drawing `t2.pdf` will be created in the same directory.
 ```
 dot -Tpdf t2.dot -o t2.pdf
 ```
 
-### Task 3:
+### Task 3
 
-**Step 3.1** Produce a filtered drawing using the graph specified in `ltimes.dot`. A _dyninst analysis file_ named `ltimes.json` with the functions and loops is also provided. 
+**Step 3.1:** Produce a filtered drawing using the graph specified in `ltimes.dot`. A _dyninst analysis file_ named `ltimes.json` with the functions and loops is also provided. 
 
 In this drawing, show only the node ids in the boxes, rather than the disassembly like the previous example. 
 
@@ -69,9 +69,9 @@ Use the following set of nodes as the starting nodes for filtering:
 ```
 The drawn graph should be limited to nodes within **3 hops** of the above set and have no more than **25 nodes** total. 
 
-**Step 3.2** Turn off the filtering and view the changed output.
+**Step 3.2:** Turn off the filtering and view the changed output.
 
-### Task 4:
+### Task 4
 Produce a filtered drawing using the same graph files `ltimes.dot` and `ltimes.json` with collapsed functions.
 
 Specifically, the functions in the filtered graph should be collapsed unless they contain loops, with the exception of the function `__kmpc_fork_call`. Ensure `__kmpc_fork_call` is still drawn.
