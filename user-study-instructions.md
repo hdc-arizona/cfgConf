@@ -32,7 +32,7 @@ First, follow the [setup guide](https://github.com/devkotasabin/cfgConf/wiki/Set
 
 Please perform the tasks below. Each will ask you to create a _CFGConf_ JSON file. Please save these files and send them to us after the study.
 
-Related files for each task are located in `cfgConf > static > CFGConf > files > tasks`.
+Support files for each task are located in `cfgConf > static > CFGConf > files > tasks`.
 
 Throughout these tasks, you can access any resources, including:
 
@@ -41,7 +41,7 @@ Throughout these tasks, you can access any resources, including:
 
 
 ### Task 1: 
-Replicate the drawing below i.e create a _CFGConf JSON file_ that creates the provided drawing.
+Replicate the drawing below. In other words, create a _CFGConf JSON file_ that creates the provided drawing.
 <p align="center">
   <img src="static/CFGConf/files/tasks/task1/graph.png" alt="result" width="20%" align="middle"/>
 </p>
