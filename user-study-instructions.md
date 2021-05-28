@@ -62,21 +62,23 @@ dot -Tpdf t2.dot -o t2.pdf
 ### Task 3:
 
 #### Step 3.1
-Produce a filtered drawing using the graph specified in `ltimes.dot` where only node ids are shown inside the nodes, rather than disassembly like the previous example. 
+Produce a filtered drawing using the graph specified in `ltimes.dot`. A _dyninst analysis file_ named `ltimes.json` with the functions and loops is also provided. 
 
-A _dyninst analysis file_ named `ltimes.json` with the functions and loops is also provided. 
+In this drawing, show only the node ids in the boxes, rather than the disassembly like the previous example. 
 
 Use the following set of nodes as the starting nodes for filtering:
 ```
 "B1973", "B1974", "B1978", "B1986", "B1993", "B4052", "B4183", "B4205", "B4206", "B4430"
 ```
-The filter should be limited to nodes within **3 hops** or a rendered graph of **25 nodes**, whichever comes first. 
+The drawn graph should be limited to nodes within **3 hops** of the above set and have no more than **25 nodes** total. 
 
 #### Step 3.2
-Turn off the filtering and note the output.
+Turn off the filtering and view the changed output.
 
 ### Task 4:
-Produce a filtered drawing using the same graph files `ltimes.dot` and `ltimes.json` where all the functions are collapsed except the functions containing the loops and the function with the name `__kmpc_fork_call`.
+Produce a filtered drawing using the same graph files `ltimes.dot` and `ltimes.json` with collapsed functions.
+
+Specifically, the functions in the filtered graph should be collapsed unless they contain loops, with the exception of the function `__kmpc_fork_call`. Ensure `__kmpc_fork_call` is still drawn.
 
 Use the following set of nodes as the starting nodes for filtering:
 ```
