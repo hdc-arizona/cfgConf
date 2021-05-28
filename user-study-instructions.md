@@ -17,7 +17,7 @@ We are evaluating the usefulness of our language/system and **not** your knowled
 
 _CFGConf_ is a JSON-based language for visualizing Control Flow Graphs (CFGs) as node-link diagrams. CFGConf is designed to make it convenient to generate CFG-specific drawings with just a few lines of JSON code. Features include filtering the graph to nodes and loops of interest and automatically collapsing and de-emphasizing uninteresting functions.
 
-First, follow the [setup guide](https://github.com/devkotasabin/cfgConf/wiki/Setup-Guide) to create the Hello World example to verify _CFGConf) is working on your system.
+First, follow the [setup guide](https://github.com/devkotasabin/cfgConf/wiki/Setup-Guide) to create the Hello World example to verify _CFGConf_ is working on your system.
 
 
 ### Troubleshooting
