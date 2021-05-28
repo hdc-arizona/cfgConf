@@ -56,7 +56,7 @@ Now, produce the drawing with all functions collapsed except the functions conta
 ## Thank you
 Thats it!. We are done with the tasks. Thank you for giving your valuable time for the evaluation of _CFGConf_. Please do not forget to complete the survey where you will be asked to upload your JSON files and provide your feedback. 
 
-### <a href="https://forms.gle/qgohazefPyHb5C1U6">You can access the survey here</a>
+### <a href="https://forms.gle/qgohazefPyHb5C1U6">Please fill out the survey here</a>
 
 Looking forward to your valuable feedback. 
 
