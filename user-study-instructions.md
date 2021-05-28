@@ -24,7 +24,7 @@ Replicate the drawing below i.e create a _CFGConf JSON file_ that creates the pr
 </p>
 
 ### Task 2:
-Produce a drawing of the graph from the dot file `t2.dot`. Loops inside the graph are provided in the file `t2_loops.json`. Make sure the nodes contain the full labels in the drawing.
+Produce a drawing of the graph from the dot file `t2.dot`. Loops inside the graph are provided in the file `t2_loops.json`. The drawing should look like the following.
 
 Compare the resulting drawing from _CFGConf_ to the drawing produced using _dot graphviz_ on the file `t2.dot`. To produce a pdf file using _dot graphviz_, you can run the following command in the terminal which will output the file `t2.pdf` in the same directory.
 ```
