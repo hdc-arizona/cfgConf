@@ -54,7 +54,7 @@ Produce a filtered drawing using the same graph files `ltimes.dot` and `ltimes.j
 Now, produce the drawing with all functions collapsed except the functions containing the loops and the function with the name `__kmpc_fork_call`.
 
 ## Thank you
-Thats it!. We are done with the tasks. Thank you for giving your valuable time for the evaluation of _CFGConf_. Please do not forget to complete the survey where you will be asked to upload your JSON files and provide your feedback. <span style="font-size:30px"><a href="https://forms.gle/qgohazefPyHb5C1U6">You can access the survey here</a></span>. Looking forward to your valuable feedback. 
+Thats it!. We are done with the tasks. Thank you for giving your valuable time for the evaluation of _CFGConf_. Please do not forget to complete the survey where you will be asked to upload your JSON files and provide your feedback. <font size="7"><a href="https://forms.gle/qgohazefPyHb5C1U6">You can access the survey here</a></font>. Looking forward to your valuable feedback. 
 
 
 
