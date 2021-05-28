@@ -27,7 +27,7 @@ Replicate the drawing below i.e create a _CFGConf JSON file_ that creates the pr
 Produce a drawing of the graph from the dot file `t2.dot`. Loops inside the graph are provided in the file `t2_loops.json`. The drawing should look as follows:
 
 <p align="center">
-  <img src="static/CFGConf/files/tasks/task2/t2_graph.png" alt="result" width="20%" align="middle"/>
+  <img src="static/CFGConf/files/tasks/task2/t2_graph.png" alt="result" width="50%" align="middle"/>
 </p>
 
 Compare the resulting drawing from _CFGConf_ to the drawing produced using _dot graphviz_ on the file `t2.dot`. To produce a pdf file using _dot graphviz_, you can run the following command in the terminal which will output the file `t2.pdf` in the same directory.
