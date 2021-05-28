@@ -43,7 +43,7 @@ Produce a filtered drawing using the graph `ltimes.dot`. Use the following set o
 ```
 "B1973", "B1974", "B1978", "B1986", "B1993", "B4052", "B4183", "B4205", "B4206", "B4430"
 ```
-Filter until you finish **3 hops or 25 nodes whichever comes first**. This graph is produced from a benchmark code used to measure the performance of High Performance Computing systems. A dyninst analysis file named `ltimes.json` is provided as well. This file contains the functions and loops in the program. Refer to the [`data` section](https://github.com/devkotasabin/cfgConf/wiki/Reference-Guide#data-object) in the reference guide to see how to use the analysis file. Make sure the drawing contains only node ids inside the nodes. 
+Filter until you finish **3 hops or 25 nodes whichever comes first**. This graph is produced from a benchmark code used to measure the performance of High Performance Computing systems. A dyninst analysis file named `ltimes.json` is provided as well. This file contains the functions and loops in the program. Refer to the [`data` section](https://github.com/devkotasabin/cfgConf/wiki/Reference-Guide#data-object) in the reference guide to see how to use the dyninst analysis file. Make sure the drawing contains only node ids inside the nodes. 
 
 #### 3.2 
 Turn off the filtering and note the result.
