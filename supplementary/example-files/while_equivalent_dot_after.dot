@@ -1,0 +1,16 @@
+strict digraph {
+  node[shape=box];
+  B0 [label=A];
+  B3 [label=D];
+  subgraph loop1 {
+    label=loop1;
+    B1 [label=B];
+    B2 [label=C];
+  }
+  B0 -> B1;
+  B1 -> B2;
+  B2 -> B1 [headport=w,tailport=w];
+  B1 -> B3 [headport=e,tailport=e];
+  B2 -> B3 [style=invis];
+}
+

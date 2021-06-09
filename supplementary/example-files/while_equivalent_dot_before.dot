@@ -1,0 +1,11 @@
+strict digraph {
+  node[shape=box];
+  B0 [label=A];
+  B1 [label=B];
+  B2 [label=C];
+  B3 [label=D];
+  B0 -> B1;
+  B1 -> B2;
+  B2 -> B1;
+  B1 -> B3;
+}

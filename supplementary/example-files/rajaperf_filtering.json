@@ -1,0 +1,81 @@
+{
+	"data": {
+		"graphFile":"raja-perf.exe.dot",
+		"analysisFile":"raja-perf.exe.json"
+	},
+
+	"rendering": {
+		"node": {
+			"style": "filled",
+			"fillcolor": "white",
+			"fontcolor": "black",
+			"label": "id"
+		},
+		"edge": {
+			"style": "solid",
+			"color": "black"
+		},
+		"loop": {
+			"background": true
+		},
+		"function": {
+			"boundary": false
+		}
+	},
+
+	"filtering": {
+		"selectedNodes": [
+			"B5551",
+			"B5552",
+			"B5553",
+			"B5554",
+			"B5555",
+			"B5556",
+			"B5557",
+			"B5558",
+			"B5559",
+			"B5560",
+			"B5561",
+			"B5562",
+			"B5563",
+			"B5564",
+			"B5565",
+			"B5566",
+			"B5567",
+			"B5568",
+			"B5569",
+			"B5570",
+			"B5571",
+			"B5572",
+			"B5574",
+			"B5576",
+			"B5578",
+			"B5579",
+			"B5580",
+			"B5581",
+			"B5583",
+			"B5585",
+			"B5586",
+			"B5587",
+			"B5588",
+			"B5590",
+			"B5592",
+			"B5594",
+			"B5595",
+			"B5596",
+			"B5597",
+			"B5598",
+			"B5599",
+			"B5600",
+			"B5601",
+			"B5717",
+			"B5718",
+			"B5719"
+		],
+		"isHopFilterOn":true, 
+		"maxHops":3, 
+		"minNodes":25, 
+		"isLoopFilterOn": true
+	}
+
+}
