@@ -5,4 +5,4 @@ Welcome to CFGConf, a JSON-based language for visualizing Control Flow Graphs. I
 Refer to the [wiki](https://github.com/devkotasabin/cfgConf/wiki) to learn more about CFGConf and to get started.
 
 ## Licence
-LGPLv2. Click [here](LICENSE) for more details.
+MIT. Click [here](LICENSE) for more details.
