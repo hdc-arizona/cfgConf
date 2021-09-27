@@ -6,3 +6,6 @@ Refer to the [wiki](https://github.com/devkotasabin/cfgConf/wiki) to learn more 
 
 ## Licence
 MIT. Click [here](LICENSE) for more details.
+
+## Acknowledgements
+This work has been supported by [NSF IIS-1844573](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1844573) and LLNS B639881 & B630670.
