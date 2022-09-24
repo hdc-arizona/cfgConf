@@ -7,5 +7,8 @@ Refer to the [wiki](https://github.com/devkotasabin/cfgConf/wiki) to learn more 
 ## Licence
 MIT. Click [here](LICENSE) for more details.
 
+## Publications
+S. Devkota, M. LeGendre, A. Kunen, P. Aschwanden, and K. E. Isaacs. Domain-centered support for layout, tasks, and specification for control flow graph visualization. Proceedings of the 10th IEEE Working Conference on Software Visualization (VISSOFT), Oct. 2022.
+
 ## Acknowledgements
 This work has been supported by [NSF IIS-1844573](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1844573) and LLNS B639881 & B630670.
